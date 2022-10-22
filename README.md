@@ -23,10 +23,10 @@ Or install it yourself as:
 ## Usage
 
 ```
-PokerTrump::Cards.from_string('Kd Kc Ks 3h 3d') > PokerTrump::Cards.from_string('Kd Kc Ks 2h 2h')
+PokerTrump::Cards.from_string('KdKcKs3h3d') > PokerTrump::Cards.from_string('KdKcKs2h2h')
 # => true
 
-['Ad Kd Qd Jd Td', 'Ad Kc Qs Jh Th', 'Ad Kc Ks Kh Kc', 'Qd Kc Ks Kh Kd', 'Ad Kc Ks 4h 3d', '2d 3c 4s 5h 6d'].map { |s| PokerTrump::Cards.from_string(s) }.sort.reverse.map(&:to_s)
+['AdKdQdJdTd', 'AdKcQsJhTh', 'AdKcKsKhKc', 'QdKcKsKhKd', 'AdKcKs4h3d', '2d3c4s5h6d'].map { |s| PokerTrump::Cards.from_string(s) }.sort.reverse.map(&:to_s)
 # => ["Ad Kd Qd Jd Td", "Ad Kc Ks Kh Kc", "Qd Kc Ks Kh Kd", "Ad Kc Qs Jh Th", "2d 3c 4s 5h 6d", "Ad Kc Ks 4h 3d"]
 ```
 

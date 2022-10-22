@@ -13,7 +13,7 @@ module PokerTrump
       end
 
       def from_string(string)
-        cards = string.split.map { |s| PokerTrump::Card.from_string(s) }
+        cards = string.scan(/[AKQJT2-9][shdc]/).map { |s| PokerTrump::Card.from_string(s) }
 
         new(cards)
       end
